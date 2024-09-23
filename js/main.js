@@ -1,3 +1,5 @@
+import handleToggleTheme from "./handleToggleTheme.js";
+
 // Elements Target
 const inputEl = document.querySelector("[data-input-string]");
 const buttonEl = document.querySelector("[data-button-copy]");
@@ -39,3 +41,8 @@ inputEl.addEventListener("keypress", (event) => {
 });
 
 buttonEl.addEventListener("click", handleReverse);
+
+// ====== TOGGLE FUNCTIONALITY ======
+toggleEl.addEventListener("click", () => {
+  handleToggleTheme();
+});
