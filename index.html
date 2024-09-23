@@ -7,32 +7,39 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <h1 class="heading">inversify • reverse anything</h1>
+    <h1 class="heading">
+      inversify • <span class="accent">reverse</span> anything
+    </h1>
     <p class="description">
-      insert string to reverse, can be used for things like passwords
+      input text and press on the icon or hit the <kbd>Enter</kbd> key
     </p>
 
     <!-- input fields -->
-    <input
-      class="input-text"
-      type="text"
-      placeholder="enter some text"
-      autofocus
-    />
-    <button class="btn-reverse">
-      <img src="/refresh.svg" alt="reverse icon" />
-    </button>
+    <div class="aside">
+      <input
+        class="input-text"
+        type="text"
+        placeholder="enter some text"
+        autofocus
+        data-input-string
+      />
+      <button class="btn-reverse" data-button-copy>
+        <img src="/refresh.svg" alt="reverse icon" />
+      </button>
+    </div>
 
     <!-- show chip on success -->
-    <span class="chip">copied</span>
+    <span class="chip" data-chip>copied</span>
+
     <!-- toggle theme -->
-    <span class="theme">
+    <span class="theme" title="Toggle Theme" data-toggle-theme>
       <img
         src="https://img.icons8.com/fluency/50/partly-cloudy-day.png"
         alt="theme-change"
+        height="24"
       />
     </span>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>
